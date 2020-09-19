@@ -26,7 +26,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-6 col-md-8">
           <div class="card bg-secondary border-0">
-            <div class="card-header bg-transparent pb-5">
+            <!-- <div class="card-header bg-transparent pb-5">
               <div class="text-muted text-center mt-2 mb-4"><small>Sign up with</small></div>
               <div class="text-center">
                 <a href="#" class="btn btn-neutral btn-icon mr-4">
@@ -38,10 +38,17 @@
                   <span class="btn-inner--text">Google</span>
                 </a>
               </div>
+            </div> -->
+            <div class="row justify-content-center">
+              <div class="col-lg-3 order-lg-2">
+                <div class="card-profile-image">
+                  <img src="img/theme/logo.png" class=" border-secondary">
+                </div>
+              </div>
             </div>
             <div class="card-body px-lg-5 py-lg-5">
               <div class="text-center text-muted mb-4">
-                <small>Or sign up with credentials</small>
+                <small>Sign up with credentials</small>
               </div>
               <validation-observer v-slot="{handleSubmit}" ref="formValidator">
                 <form role="form" @submit.prevent="handleSubmit(onSubmit)">

@@ -15,7 +15,7 @@ import NotFound from '@/views/GeneralViews/NotFoundPage.vue';
 const Login = () => import('@/views/Starter/Admin/Auth/Login.vue');
 // const Home = () => import('@/views/Starter/Admin/Auth/Home.vue');
 const Register = () => import('@/views/Starter/Admin/Auth/Register.vue');
-const Lock = () => import('@/views/Starter/Admin/Auth/Lock.vue');
+const Forgot = () => import('@/views/Starter/Admin/Auth/Forgot.vue');
 
 
 
@@ -54,9 +54,9 @@ let authPages = {
     //   component: Pricing
     // },
     {
-      path: '/lock',
-      name: 'Lock',
-      component: Lock
+      path: '/forgot',
+      name: 'Forgot',
+      component: Forgot
     },
     {
       path: '*',

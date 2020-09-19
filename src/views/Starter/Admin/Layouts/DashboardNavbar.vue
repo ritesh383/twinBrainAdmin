@@ -46,7 +46,7 @@
         <a href="#" class="nav-link pr-0" @click.prevent slot="title-container">
           <div class="media align-items-center">
                   <span class="avatar avatar-sm rounded-circle">
-                    <img alt="Image placeholder" src="/img/theme/team-4.jpg">
+                    <img alt="Image placeholder" src="/img/brand/default.png">
                   </span>
             <div class="media-body ml-2 d-none d-lg-block">
               <span class="mb-0 text-sm  font-weight-bold">{{username}}</span>

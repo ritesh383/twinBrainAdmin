@@ -42,6 +42,11 @@
               </form>
             </div>
           </div>
+          <div class="row mt-3">
+            <div class="col-6">
+              <router-link to="/login" class="text-light"><small>I remember my password</small></router-link>
+            </div>
+          </div>
         </div>
       </div>
     </div>

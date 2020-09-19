@@ -6,9 +6,9 @@
         <div class="header-body text-center mb-7">
           <div class="row justify-content-center">
             <div class="col-xl-5 col-lg-6 col-md-8 px-5">
-              <h1 class="text-white">Welcome!</h1>
-              <p class="text-lead text-white">Use these awesome forms to login or create new account in your project for
-                free.</p>
+              <h1 class="text-white">Login</h1>
+              <!-- <p class="text-lead text-white">Use these awesome forms to login or create new account in your project for
+                free.</p> -->
             </div>
           </div>
         </div>
@@ -38,6 +38,13 @@
                 </a>
               </div>
             </div> -->
+            <div class="row justify-content-center">
+              <div class="col-lg-3 order-lg-2">
+                <div class="card-profile-image">
+                  <img src="img/theme/logo.png" class=" border-secondary">
+                </div>
+              </div>
+            </div>
             <div class="card-body px-lg-5 py-lg-5">
               <div class="text-center text-muted mb-4">
                 <small>Sign in with credentials</small>
@@ -61,11 +68,11 @@
           </div>
           <div class="row mt-3">
             <div class="col-6">
-              <router-link to="/lock" class="text-light"><small>Forgot password?</small></router-link>
+              <router-link to="/forgot" class="text-light"><small>Forgot password?</small></router-link>
             </div>
-            <div class="col-6 text-right">
+            <!-- <div class="col-6 text-right">
               <router-link to="/register" class="text-light"><small>Create new account</small></router-link>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -91,7 +98,7 @@
           password: this.model.password
         })
       .then(response => {
-          console.log('response',response);
+          // console.log('response',response);
           let token = response.data.jwt;
           let username = response.data.user.username;
           localStorage.setItem('token', token);

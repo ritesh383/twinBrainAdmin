@@ -42,16 +42,16 @@
              <span class="nav-link-inner--text">Pricing</span>
            </router-link>
          </li> -->
-         <li class="nav-item">
+         <!-- <li class="nav-item">
            <router-link to="/login" class="nav-link">
              <span class="nav-link-inner--text">Login</span>
            </router-link>
-         </li>
-         <li class="nav-item">
+         </li> -->
+         <!-- <li class="nav-item">
            <router-link to="/register" class="nav-link">
              <span class="nav-link-inner--text">Register</span>
            </router-link>
-         </li>
+         </li> -->
          <!-- <li class="nav-item">
            <router-link to="/lock" class="nav-link">
              <span class="nav-link-inner--text">Lock</span>
@@ -113,13 +113,12 @@
     <footer class="py-5" id="footer-main">
       <div class="container">
         <div class="row align-items-center justify-content-xl-between">
-          <div class="col-xl-6">
+          <!-- <div class="col-xl-6">
             <div class="copyright text-center text-xl-left text-muted">
-              © {{year}} <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Creative Tim</a> &
-              <a href="https://www.binarcode.com" class="font-weight-bold ml-1" target="_blank">Binar Code</a>
+              © {{year}} <a href="javascript:void(0)" class="font-weight-bold ml-1" target="_blank">Twin Brain</a>
             </div>
-          </div>
-          <div class="col-xl-6">
+          </div> -->
+          <!-- <div class="col-xl-6">
             <ul class="nav nav-footer justify-content-center justify-content-xl-end">
               <li class="nav-item">
                 <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Creative Tim</a>
@@ -134,7 +133,7 @@
                 <a href="https://www.creative-tim.com/license" class="nav-link" target="_blank">License</a>
               </li>
             </ul>
-          </div>
+          </div> -->
         </div>
       </div>
     </footer>
