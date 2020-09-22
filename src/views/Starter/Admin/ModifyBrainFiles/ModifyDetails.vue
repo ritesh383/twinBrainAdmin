@@ -36,52 +36,52 @@
                     </div>
                     </div>
                     <div class="card-body">
-                        <div class="mb-3">{{ques.title}}</div>
+                        <div v-if="ques.title" class="mb-3">{{ques.title}}</div>
                         <div class="questions">
                             <h3>
-                            1. Behaviours - {{ques.labels.behaviours}}
+                            <div class="mr-1">1.</div> <div>Behaviours - {{ques.labels.behaviours}}</div>
                             </h3>
-                            <div class="mb-2">
+                            <div class="mb-2 pl-3">
                                 {{ques.responses.behaviours}}
                             </div>
                         </div>
                         <div class="questions">
                             <h3>
-                            2. Body reactions - {{ques.labels.body_reactions}}
+                            <div class="mr-1">2.</div> <div>Body reactions - {{ques.labels.body_reactions}}</div>
                             </h3>
-                            <div class="mb-2">
+                            <div class="mb-2 pl-3">
                                 {{ques.responses.body_reactions}}
                             </div>
                         </div>
                         <div class="questions">
                             <h3>
-                            3. Decision - {{ques.labels.decision}}
+                            <div class="mr-1">3.</div> <div>Decision - {{ques.labels.decision}}</div>
                             </h3>
-                            <div class="mb-2">
+                            <div class="mb-2 pl-3">
                                 {{ques.responses.decision}}
                             </div>
                         </div>
                         <div class="questions">
                             <h3>
-                            4. Emotion - {{ques.labels.emotion}}
+                            <div class="mr-1">4.</div> <div>Emotion - {{ques.labels.emotion}}</div>
                             </h3>
-                            <div class="mb-2">
+                            <div class="mb-2 pl-3">
                                 {{ques.responses.emotion}}
                             </div>
                         </div>
                         <div class="questions">
                             <h3>
-                            5. Situation - {{ques.labels.situation}}
+                            <div class="mr-1">5.</div> <div>Situation - {{ques.labels.situation}}</div>
                             </h3>
-                            <div class="mb-2">
+                            <div class="mb-2 pl-3">
                                 {{ques.responses.situation}}
                             </div>
                         </div>
                         <div class="questions">
                             <h3>
-                            6. Thoughts - {{ques.labels.thoughts}}
+                            <div class="mr-1">6.</div> <div>Thoughts - {{ques.labels.thoughts}}</div>
                             </h3>
-                            <div class="mb-2">
+                            <div class="mb-2 pl-3">
                                 {{ques.responses.thoughts}}
                             </div>
                         </div>
@@ -145,7 +145,7 @@
     },
   };
 </script>
-<style>
+<style lang="scss">
   .starter-page {
     min-height: calc(100vh - 236px) !important;
   }
@@ -160,5 +160,11 @@
     margin-top: 20px;
     cursor: pointer;
     font-weight: 700;
+}
+.questions {
+  h3 {
+    display: flex;
+    // white-space: nowrap;
+  }
 }
 </style>
