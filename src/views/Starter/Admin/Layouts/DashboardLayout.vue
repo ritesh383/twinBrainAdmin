@@ -7,7 +7,8 @@
           <sidebar-item :link="{ name: 'Dashboard', path: '/admin/dashboard' }"></sidebar-item>
         </sidebar-item> -->
         <sidebar-item :link="{ name: 'Dashboard', icon: 'ni ni-shop text-primary', path: '/admin/dashboard' }"></sidebar-item>
-        <sidebar-item  v-for="p  in pages" :key="p.id" :link="{ name: p.page_label, icon: 'ni ni-bullet-list-67', path: '/admin/' + `${p.Page_url}/${p.id}` }"></sidebar-item>
+        <sidebar-item  v-for="p  in pages" :key="p.id" :link="{ name: p.page_label, icon: 'ni ni-bullet-list-67', path: '/admin/content/' + `${p.Page_url}/${p.id}` }"></sidebar-item>
+        <sidebar-item :link="{ name: 'Modify Brain Files', icon: 'ni ni-shop text-primary', path: '/admin/modify-brain-files' }"></sidebar-item>
       </template>
     </side-bar>
     <div class="main-content">

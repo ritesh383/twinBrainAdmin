@@ -23,6 +23,8 @@ const Forgot = () => import('@/views/Starter/Admin/Auth/Forgot.vue');
 import AdminLayout from '../views/Starter/Admin/Layouts/DashboardLayout.vue';
 import dashboard from '../views/Starter/Admin/Dashboard/Dashboard.vue';
 import Contents from '../views/Starter/Admin/ContentPage/Contents.vue';
+import Modify from '../views/Starter/Admin/ModifyBrainFiles/Index.vue';
+import ModifyDetails from '../views/Starter/Admin/ModifyBrainFiles/ModifyDetails.vue';
 
 Vue.use(Router);
 let authPages = {
@@ -86,10 +88,24 @@ export default new Router({
            }
          },
            {
-           path: '*/:id',
+           path: 'content/*/:id',
            name: 'Contents',
            components: {
              default: Contents
+           }
+         },
+           {
+           path: 'modify-brain-files',
+           name: 'Modify',
+           components: {
+             default: Modify
+           }
+         },
+           {
+           path: 'modify/:id',
+           name: 'ModifyDetails',
+           components: {
+             default: ModifyDetails
            }
          }
         ]
