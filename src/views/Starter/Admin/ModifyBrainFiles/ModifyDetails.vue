@@ -18,7 +18,7 @@
               back
             </div>
               <div class="text-center mt-4">
-                  <h2>User - {{user.user_id}}</h2>
+                  <h2>{{user.user_name}}</h2>
                   <div><small>{{date}}, {{time}}</small></div>
               </div>
             <div class="row grid">
@@ -34,15 +34,31 @@
                         <div v-if="ques.title" class="mb-3">{{ques.title}}</div>
                         <div class="questions">
                             <h3>
-                            <div class="mr-1">1.</div> <div>Behaviours - {{ques.labels.behaviours}}</div>
+                            <div class="mr-1">1.</div> <div>Situation - {{ques.labels.situation}}</div>
                             </h3>
                             <div class="mb-2 pl-3">
-                                {{ques.responses.behaviours}}
+                                {{ques.responses.situation}}
                             </div>
                         </div>
-                        <div class="questions">
+                         <div class="questions">
                             <h3>
-                            <div class="mr-1">2.</div> <div>Body reactions - {{ques.labels.body_reactions}}</div>
+                            <div class="mr-1">2.</div> <div>Thoughts - {{ques.labels.thoughts}}</div>
+                            </h3>
+                            <div class="mb-2 pl-3">
+                                {{ques.responses.thoughts}}
+                            </div>
+                        </div>
+                         <div class="questions">
+                            <h3>
+                            <div class="mr-1">3.</div> <div>Emotion - {{ques.labels.emotion}}</div>
+                            </h3>
+                            <div class="mb-2 pl-3">
+                                {{ques.responses.emotion}}
+                            </div>
+                        </div>
+                         <div class="questions">
+                            <h3>
+                            <div class="mr-1">4.</div> <div>Body reactions - {{ques.labels.body_reactions}}</div>
                             </h3>
                             <div class="mb-2 pl-3">
                                 {{ques.responses.body_reactions}}
@@ -50,36 +66,24 @@
                         </div>
                         <div class="questions">
                             <h3>
-                            <div class="mr-1">3.</div> <div>Decision - {{ques.labels.decision}}</div>
+                            <div class="mr-1">5.</div> <div>Behaviours - {{ques.labels.behaviours}}</div>
+                            </h3>
+                            <div class="mb-2 pl-3">
+                                {{ques.responses.behaviours}}
+                            </div>
+                        </div>
+                       
+                        <div class="questions">
+                            <h3>
+                            <div class="mr-1">6.</div> <div>Decision - {{ques.labels.decision}}</div>
                             </h3>
                             <div class="mb-2 pl-3">
                                 {{ques.responses.decision}}
                             </div>
                         </div>
-                        <div class="questions">
-                            <h3>
-                            <div class="mr-1">4.</div> <div>Emotion - {{ques.labels.emotion}}</div>
-                            </h3>
-                            <div class="mb-2 pl-3">
-                                {{ques.responses.emotion}}
-                            </div>
-                        </div>
-                        <div class="questions">
-                            <h3>
-                            <div class="mr-1">5.</div> <div>Situation - {{ques.labels.situation}}</div>
-                            </h3>
-                            <div class="mb-2 pl-3">
-                                {{ques.responses.situation}}
-                            </div>
-                        </div>
-                        <div class="questions">
-                            <h3>
-                            <div class="mr-1">6.</div> <div>Thoughts - {{ques.labels.thoughts}}</div>
-                            </h3>
-                            <div class="mb-2 pl-3">
-                                {{ques.responses.thoughts}}
-                            </div>
-                        </div>
+                       
+                        
+                       
                     </div>
                 </div>
                 
@@ -116,6 +120,7 @@
                   Authorization: 'Bearer ' + token //the token is a variable which holds the token
               }
             }
+            // console.log('resData', this.$route.params.id)
           axios.get(`worksheet-41-s/` + this.$route.params.id ,config)
           .then(res => {
             // console.log('res', res)
@@ -127,6 +132,7 @@
           })
           .catch(e => {
             this.errors.push(e);
+            console.log('resData', e)
           })
 
     },

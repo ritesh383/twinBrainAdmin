@@ -9,6 +9,7 @@
         <sidebar-item :link="{ name: 'Dashboard', icon: 'ni ni-shop text-primary', path: '/admin/dashboard' }"></sidebar-item>
         <sidebar-item  v-for="p  in pages" :key="p.id" :link="{ name: p.page_label, icon: 'ni ni-bullet-list-67', path: '/admin/content/' + `${p.Page_url}/${p.id}` }"></sidebar-item>
         <sidebar-item :link="{ name: 'Modify Brain Files', icon: 'ni ni-bullet-list-67', path: '/admin/modify-brain-files' }"></sidebar-item>
+        <sidebar-item :link="{ name: 'Add user', icon: 'ni ni-circle-08', path: '/admin/add-user' }"></sidebar-item>
       </template>
     </side-bar>
     <div class="main-content">

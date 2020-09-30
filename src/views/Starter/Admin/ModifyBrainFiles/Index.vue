@@ -14,11 +14,14 @@
     <div class="container-fluid pt-5">
       <div class="starter-page">
         <div class="card">
-            <div class="border-0 card-header">
+            <div class="border-0 card-header user_search">
                 <h3 class="mb-0">Modify Users</h3>
+                <div>
+                   <base-input alternative v-model="search_filter" placeholder="Search user..." prepend-icon="fa fa-search"></base-input>
+                </div>
             </div>
 
-            <el-table class="table-responsive table-flush" header-row-class-name="thead-light" @row-click="rowClicked" :data="data">
+            <el-table class="table-responsive table-flush" header-row-class-name="thead-light" @row-click="rowClicked" :data="filteredList">
                 <el-table-column label="User" min-width="310px" prop="name" sortable>
                     <template v-slot="{row}">
                         <div class="media align-items-center">
@@ -26,7 +29,7 @@
                                 <img alt="Image placeholder" :src="row.img">
                             </a> -->
                             <div class="media-body">
-                                <span class="font-weight-600 name mb-0 text-sm">{{row.user_id}}</span>
+                                <span class="font-weight-600 name mb-0 text-sm">{{row.user_name}}</span>
                             </div>
                         </div>
                     </template>
@@ -75,7 +78,8 @@
     data() {
       return {
         // currentPage: 1,
-        data: []
+        data: [],
+        search_filter: ''
       };
     },
     created() {
@@ -89,11 +93,11 @@
             }
           axios.get(`worksheet-41-s`,config)
           .then(res => {
-           
+            // console.log('resData', res)
             // this.data = res.data
             let data = res.data
             data.forEach(element => {
-            //   console.log('element', element)
+              // console.log('element', element)
               const today = new Date(element.created_at);
               const date = today.getFullYear() + '-' + (today.getMonth() + 1).toString().replace(/^(\d)$/, '0$1') + '-' + today.getDate().toString().replace(/^(\d)$/, '0$1');
               const time = today.getHours().toString().replace(/^(\d)$/, '0$1') + ":" + today.getMinutes().toString().replace(/^(\d)$/, '0$1') + ":" + today.getSeconds().toString().replace(/^(\d)$/, '0$1')
@@ -115,6 +119,14 @@
             // this.errors.push(e);
           })
 
+    },
+    computed: {
+      filteredList() {
+      return this.data.filter(row => { 
+            var userSearch = row.user_name.toLowerCase().includes(this.search_filter.toLowerCase()); 
+            return userSearch
+      })
+    }
     },
     methods: {
         rowClicked(selectedRows) {
@@ -147,5 +159,10 @@ i.bg-pending {
 }
 i.bg-cancelled {
     background: #dc3545;
+}
+.border-0.card-header.user_search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 </style>

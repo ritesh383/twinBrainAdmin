@@ -25,6 +25,7 @@ import dashboard from '../views/Starter/Admin/Dashboard/Dashboard.vue';
 import Contents from '../views/Starter/Admin/ContentPage/Contents.vue';
 import Modify from '../views/Starter/Admin/ModifyBrainFiles/Index.vue';
 import ModifyDetails from '../views/Starter/Admin/ModifyBrainFiles/ModifyDetails.vue';
+import AddUser from '../views/Starter/Admin/AddUser/Index.vue';
 
 Vue.use(Router);
 let authPages = {
@@ -106,6 +107,13 @@ export default new Router({
            name: 'ModifyDetails',
            components: {
              default: ModifyDetails
+           }
+         },
+           {
+           path: 'add-user',
+           name: 'AddUser',
+           components: {
+             default: AddUser
            }
          }
         ]
